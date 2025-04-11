@@ -1,30 +1,7 @@
 #include <iostream> //Header inclusion
 #include "multiply1.h"
-#include <cmath> //Inclusion necessary for ceil operation
 using namespace std;
 
-//Multiply function with integer parameters - Part A
-int Multiply(int a, int b){
-    return a * b;
-}
-
-//Multiply function with double parameters - Part B
-double Multiply(double a, double b){
-    return a * b;
-}
-
-//Multiply function with integer, double and flag - Part C
-double Multiply(int a, double b, bool flag){
-    double result = a * b;
-
-    if(!flag){
-       return result;
-    }
-    
-    else{
-        return ceil(result);
-    }
-}
 
 //Main function will output the result of each function based on user input
 int main(){
@@ -65,12 +42,13 @@ int main(){
     doubleresult2 = Multiply(num3, num6, false);
     
     cout<<"This is the result of the two numbers multiplied together with a";
-    cout<<" false flag: "<<doubleresult2<<endl;
+    cout<<" false flag (normal result): "<<doubleresult2<<endl;
 
     //Part C with true flag
     doubleresult2 = Multiply(num3, num6, true);
 
-    cout<<"And this is the same result with a true flag: "<<doubleresult2<<endl;
+    cout<<"And this is the same result with a true flag (ceiled result): ";
+    cout<<doubleresult2<<endl;
 
     return 0;
 }
