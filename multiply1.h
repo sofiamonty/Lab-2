@@ -1,6 +1,9 @@
 #ifndef MULTIPLY1_H
 #define MULTIPLY1_H
+
+#include <iostream>
 #include <cmath>
+using namespace std;
 
 //Multiply function with integer parameters - Part A
 int Multiply(int a, int b){
